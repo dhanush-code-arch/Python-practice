@@ -1,0 +1,26 @@
+
+try:
+    available_balance = 5000
+    pin = 7293
+
+    withdraw_amount = int(input("Enter your withdraw amount: "))
+    user_pin = int(input("Enter your PIN: "))
+
+    if pin == user_pin:
+        if withdraw_amount <= 0:
+            print("Please enter a valid amount")
+        elif available_balance >= withdraw_amount:
+            available_balance -= withdraw_amount
+            print("WITHDRAWAL SUCCESSFUL")
+            print("Your available balance is:", available_balance)
+            print("------THANK YOU FOR USEING OUR SURVICE!")
+        else:
+            print("Insufficient balance in your bank account")
+    else:
+        print("Please enter your PIN correctly")
+
+except ValueError:
+    print("Please enter numbers only")
+
+except Exception as e:
+    print("Something went wrong:", e)
