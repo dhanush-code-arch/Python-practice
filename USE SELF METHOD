@@ -1,0 +1,20 @@
+
+class laptop:
+
+    def __init__(self, name, processor, ram):
+        self.name = name
+        self.processor = processor
+        self.ram = ram
+
+    def display(self):
+        print("Laptop name is:", self.name)
+        print("Laptop processor is:", self.processor)
+        print("Laptop RAM is:", self.ram)
+
+
+a = input("Enter the laptop name: ")
+b = input("Enter the processor name: ")
+c = input("Enter the RAM: ")
+
+obj = laptop(name=a, processor=b, ram=c)
+obj.display()
